@@ -1,0 +1,17 @@
+[package]
+name = "entropy-forge"
+version = "0.1.0"
+edition = "2021"
+description = "Research-grade Rust toolkit for entropy estimation, TDE, and graph entropy centrality"
+license = "MIT"
+repository = "https://example.invalid/entropy-forge"
+
+[dependencies]
+clap = { version = "4.5", features = ["derive"] }
+csv = "1.3"
+nalgebra = "0.32"
+thiserror = "1.0"
+
+[profile.release]
+codegen-units = 1
+lto = true

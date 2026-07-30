@@ -1,0 +1,75 @@
+What is the definition of the Shannon entropy rate $H(\chi)$ for a discrete-time stochastic process?,"$H(\chi) = \lim_{n \to \infty} \frac{1}{n} H(X_1, \dots, X_n)$"
+"How is the differential entropy rate $h(\chi)$ defined for a continuous-valued, discrete-time process?","$h(\chi) = \lim_{n \to \infty} \frac{1}{n} h(X_1, \dots, X_n)$"
+"According to Theorem 1 in entropy rate estimation, what does the entropy rate equal for a stationary stochastic process?","It is equal to the limit of the conditional entropy: $\lim_{n \to \infty} H(X_n | X_{n-1}, \dots, X_1)$."
+"In the context of entropy estimation, what is the primary difference between parametric and non-parametric techniques?","Parametric techniques assume a specific model for the data-generating process, while non-parametric techniques make few assumptions."
+What is the formula for the entropy rate of a Gaussian process in terms of its spectral density $f(\lambda)$?,$h(\chi) = \frac{1}{2} \log (2 \pi e) + \frac{1}{4 \pi} \int_{-\pi}^{\pi} \log (f(\lambda)) d \lambda$
+What specific class of processes is identified as the best fit for finite covariance constraints under the Principle of Maximum Entropy?,Autoregressive processes ($AR(p)$).
+What is the entropy rate of a stationary Markov chain with state space $\Omega$?,$H(\chi) = \sum_{i \in \Omega} \sum_{j \in \Omega} \pi_i p_{ij} \log p_{ij}$
+Why is the entropy rate of a Hidden Markov Model (HMM) generally difficult to calculate?,There is no known general closed-form expression to calculate it directly from parameters.
+Which non-parametric entropy estimator is based on a limit theorem involving the length of shortest prefix string matches?,The Lempel-Ziv based estimator.
+How does Sample Entropy ($SampEn$) improve upon Approximate Entropy ($ApEn$)?,It eliminates self-matches in the data to reduce bias.
+What does Permutation Entropy utilise to quantify the complexity of a continuous-valued time series?,The relative frequencies of different numerical order patterns (permutations) in substrings.
+"In industrial sensor networks, how is 'Entropy Centrality' for a node $v_i$ calculated?",$H(v_i) = H(G) - H(G \setminus \{v_i\})$
+What is the purpose of using an entropy-based attention mechanism in Graph Neural Networks for anomaly detection?,To differentiate the weights of high-order neighbour nodes based on their topological importance.
+"In the SPU thermodynamic computing system, which electrical components form the unit cells?","$RLC$ circuits (Resistor, Inductor, Capacitor)."
+What is the fundamental physics principle stating that erasing one bit of information dissipates a minimum amount of heat?,Landauer's Principle.
+How does a Stochastic Processing Unit (SPU) perform matrix inversion?,By mapping the target matrix to the Maxwell capacitance matrix and gathering voltage samples at thermal equilibrium.
+What is the predicted asymptotic runtime scaling of an SPU compared to a GPU for Gaussian sampling?,"The SPU scales at $O(d^2)$, whereas the GPU (using Cholesky sampling) scales at $O(d^3)$."
+What major hardware limitation hinders the scaling of $LC$-based thermodynamic computers to integrated circuits?,The large physical size and parasitic coupling of inductors.
+"In Time Delay Estimation (TDE), what is the relationship between MCCC and joint entropy for Gaussian signals?",Maximising the Multichannel Cross-Correlation Coefficient (MCCC) is equivalent to minimising the joint entropy.
+Why is joint entropy-based TDE considered potentially superior to MCCC for speech signals?,"Speech signals are non-Gaussian (often Laplace-distributed), and entropy captures higher-order dependencies."
+What does the Wireshark filter `wlan.fc.type_subtype == 0x08` isolate in a WiFi packet capture?,Beacon frames.
+"In WiFi PCAP analysis, what does the presence of EAPOL packets signify?",A 4-way cryptographic handshake between a client and an access point.
+What two pieces of information are strictly required to decrypt WPA2 traffic in Wireshark?,The network's PSK (password) and a captured 4-way handshake.
+"In an 802.11 frame, what do the flags 'To DS = 1' and 'From DS = 0' indicate?",Traffic is moving from a client to the Distribution System (the router).
+Why is DNS referred to as the 'gossip channel' in network packet analysis?,DNS queries are often in plain text and reveal the user's intended destinations and habits.
+What is the definition of a 'stationary' stochastic process?,A process where the joint distribution does not change when shifted in time.
+What does the 'Specific Entropy' technique use to estimate the conditional probability density function?,Non-parametric kernel density estimation based on a finite history of values.
+"In the context of the SPU, what physical quantities are mapped to 'position' and 'momentum' in Langevin equations?","Magnetic flux ($\phi$) is mapped to position, and Maxwell charge ($q$) is mapped to momentum."
+What is the 'burn-in' or 'equilibration' time in thermodynamic computing?,The time the physical system must wait to reach its steady-state Gibbs distribution.
+"In multivariate time-series anomaly detection, what is the role of the 'sliding window' $\omega$?",It defines the length of the historical time-series segment used to predict the next state or label.
+Which Wireshark filter is used to identify devices searching for familiar networks?,`wlan.fc.type_subtype == 0x04` (Probe requests).
+What is the primary advantage of non-parametric spectral density estimation like the periodogram?,It can estimate the spectral density directly from data without additional modelling assumptions.
+"In thermodynamic computing, how is temperature control effectively implemented?",By controlling the power spectral density of a Gaussian current noise source.
+What is the 'Firehose Problem' in packet analysis?,The overwhelming volume of management and control frames that obscure relevant data in a raw capture.
+How can an analyst reconstruct a complete unencrypted conversation from a PCAP file in Wireshark?,By using the 'Follow TCP Stream' feature.
+"In anomaly detection, what does the 'Precision' metric measure?",The proportion of correctly identified anomalies out of all instances flagged as anomalies.
+What is the 'Rogue Access Point' technique in WiFi hacking?,"Spoofing beacon frames to trick clients into connecting to a malicious, controlled environment."
+Why must a wireless card be in 'Monitor Mode' for packet capturing?,To allow the card to 'listen' to all traffic on a channel without being associated with a specific network.
+"In the SDEs of thermodynamic computing, what term represents the conservative forces?",The gradient of the potential energy: $-\nabla U$.
+Which entropy measure generalises Shannon entropy and is used for further quantification of complexity?,Rényi entropy.
+What is the significance of the 'Doeblin condition' in non-parametric entropy estimation?,It is a condition on stationary ergodic processes that ensures the consistency of string-matching estimators.
+"In graph modelling of sensors, what does a directed edge $v_i \to v_j$ typically represent?",The influence or logical coupling exerted by sensor $i$ upon sensor $j$.
+What is the purpose of the 'Graph Fourier Transform' ($GFT$) in time-series modelling?,To explicitly model inter-series correlations in a graph-based framework.
+How is the 'Anomaly Detection Score' calculated for a system of multiple sensors?,By identifying the maximum normalized error score among all sensors for a given input.
+"In PCAP analysis, why might a 24 KB file from a four-hour capture indicate a failure?","The file size is too small, suggesting the antenna was unplugged or the card was on the wrong channel."
+What is the role of an FPGA in the Stochastic Processing Unit (SPU) architecture?,It acts as an intermediary for data flow and provides the controllable noise source.
+What is the 'MCCC' in the context of signal processing with multiple sensors?,"Multichannel Cross-Correlation Coefficient, an SOS measure of dependence among multiple random variables."
+Why are 'Beacon frames' useful to an analyst before any client connects to a network?,"They announce the SSID, encryption type, and capabilities of the Access Point."
+What is the primary drawback of using 'Approximate Entropy' on short data sets?,It is positively biased because it counts self-matches of substrings.
+"In thermodynamic linear algebra, what does the voltage vector $v$ follow at thermal equilibrium?","A multivariate Gaussian distribution: $v \sim N(0, A^{-1})$."
+What does the Wireshark filter `eapol` specifically target?,"The Extensible Authentication Protocol over LAN, used in the WPA handshake."
+How is the entropy rate of a renewal process $H(S)$ calculated?,"$H(S) = \lambda H(X)$, where $\lambda$ is the event rate and $H(X)$ is the inter-event entropy."
+"In the 'Specific Entropy' method, what does 'conditional stationarity' imply?",That the conditional distribution of a state given its history does not depend on the specific time $t$.
+What is 'Monitor Mode' in wireless networking?,A state that allows a wireless NIC to capture all packets on a channel without being associated with an AP.
+Which Wireshark filter helps isolate traffic from a specific IP address?,`ip.addr == [IP Address]`
+What is the purpose of 'sliding step' $\tau$ in time-series data preparation?,It determines the increment between the starting points of consecutive data windows.
+How does 'Entropy Centrality' help in screening a node's neighbours in a graph?,By analysing the entropy decay strength associated with the removal of specific nodes from the structure.
+"In SPU experiments, what does the 'Relative Frobenius Error' measure?",the difference between the experimentally determined matrix inverse and the true target inverse.
+What is the benefit of 'Recursive MCCC' estimation in signal processing?,It allows the cross-correlation coefficient to be updated efficiently as new data snapshots arrive.
+"In WiFi analysis, what is the meaning of 'Layer 2' and 'Layer 3' visibility?","Layer 2 covers 802.11 WiFi wrappers (MACs), while Layer 3 covers the IP world (TCP/UDP)."
+What is the main limitation of the 'Periodogram' for large sample sizes?,It may not converge as the sample size increases.
+Why is 'Minimum Entropy' preferred for TDE when dealing with non-Gaussian noise?,Entropy-based measures are more robust to outliers and heavy-tailed noise distributions.
+What is the purpose of 'decryption live' in Wireshark?,To transform encrypted data blobs into readable Layer 3 traffic in real-time using a known key.
+"In the SPU architecture, what happens if the noise source bandwidth does not match the system dynamics?",The system may fail to reach the correct thermal equilibrium distribution.
+What is the 'Recall' metric in anomaly detection?,The proportion of actual anomalies that were correctly identified by the model.
+How does 'Feature Aggregation' work in an entropy-based GNN?,It combines information from related nodes using learned parameters and entropy-weighted attention.
+What is the primary function of the `airmon-ng` tool?,To enable monitor mode on wireless network interfaces.
+"In TDE, why is it necessary to assume the source signal is 'reasonably broadband'?",To ensure there is enough spectral content to uniquely identify the time delay via correlation.
+What is the 'Shannon entropy' of a discrete random variable?,$H(X) = - \sum p(x) \log p(x)$
+"In the context of the MSL Mars Rover, how many sensors were used for time-series anomaly detection modelling?",27 sensors.
+What is the 'Maxwell capacitance matrix' $C$ in the context of an SPU circuit?,A matrix where diagonal elements are total cell capacitances and off-diagonal elements are coupling capacitances.
+How does 'Entropy-Based Feature Aggregation' improve anomaly detection performance?,By identifying and prioritising key adjacent elements through system entropy analysis.
+What does the Wireshark filter `http` reveal in an unencrypted network capture?,"GET requests, URLs, search queries, and administrative panel activity."
+What is a 'Closed List' in flashcard design principles?,"A list with a finite, fixed number of members that should be tested individually."
+"In thermodynamic computing, what is the ' effective temperature parameter' $\beta$?","A parameter defined as $\beta = \gamma \kappa_0^{-1}$, relating dissipation to noise power."

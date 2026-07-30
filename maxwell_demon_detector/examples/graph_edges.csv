@@ -1,0 +1,8 @@
+src,dst,weight
+hub,a,3.0
+hub,b,2.0
+hub,c,1.0
+a,hub,0.5
+b,hub,0.5
+c,hub,0.5
+a,b,0.2
