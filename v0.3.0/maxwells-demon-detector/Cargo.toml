@@ -1,0 +1,31 @@
+[package]
+name = "maxwells-demon-detector"
+version = "0.3.0"
+edition = "2021"
+rust-version = "1.87"
+description = "Realtime ASCII landscape of structure (entropy, dependency, rhythm) flowing through data streams: packets, event logs, raw bytes"
+license-file = "LICENSE.md"
+default-run = "mdd"
+
+[[bin]]
+name = "mdd"
+path = "src/main.rs"
+
+[features]
+default = []
+# Live capture through libpcap (Linux) / Npcap (Windows). Needs native libs to build.
+live = ["dep:pcap"]
+
+[dependencies]
+clap = { version = "4.6", features = ["derive"] }
+crossterm = "0.29"
+csv = "1.4"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+pcap = { version = "2.5", optional = true }
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = 3
+strip = true
